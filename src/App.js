@@ -1,4 +1,5 @@
 import { Component } from 'react';
+
 import './App.css';
 
 class WhoAmI extends Component {
@@ -30,7 +31,7 @@ class WhoAmI extends Component {
     const {position, years, text} = this.state;
 
     return(
-      <div>
+      <>
         <button onClick={this.nextYear} >{text}</button>
         <h1>My name is {name}, surname - {surname}, 
             age - {years}, 
@@ -40,14 +41,14 @@ class WhoAmI extends Component {
           <span>Enter job title</span>
           <input type="text" onChange={(e) => this.commitInputChanges(e, 'some color')} />
         </form>
-      </div>
+      </>
     )
   }
 }
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <WhoAmI name='Alex' surname='Syniak' link='facebook.com' />
       <WhoAmI name='Tania' surname='Bohdanova' link='instagram.com' />
     </div>
